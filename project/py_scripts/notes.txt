@@ -1,0 +1,10 @@
+stuff for reference
+things to check if robot isnt working
+ - code (debugging stuff, the usual)
+ - connection (use V01 file/LED light)
+ - wiring (sighhhhhhh)
+ - make sure batteries arent dead because you forgot to turn them off and they were on all night, what a silly thing to do i would never make such a stupid mistake hahahaha
+
+servo
+ - right backwards, left forwards - moves robot forwards
+ - right forwards, left backwards - moves robot backwards

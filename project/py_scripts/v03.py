@@ -28,13 +28,12 @@ my_servo_right = Servo(pwm=servo_pwm_II)
 
 while True:
     # manually set the servo duty time
-    my_servo_right.set_duty(500)
-    my_servo_left.set_duty(500)
+    my_servo_right.set_duty(1200)
+    my_servo_left.set_duty(1800)
     time.sleep(2)
-    print("backwards. runs right wheel.")
+    print("forward - slow")
 
-#TO-DO - DOUBLE PERIOD
-#FIX WIRES, RED - NEGATIVE, BLACK - POSITIVE
-#TAPE WIRES IN
-#TEST CODE
-#GET BOTH SERVOS TO WORK AT THE SAME TIME
+    my_servo_right.set_duty(1800)
+    my_servo_left.set_duty(1200)
+    time.sleep(2)
+    print("backward - slow")
