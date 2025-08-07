@@ -8,3 +8,17 @@ things to check if robot isnt working
 servo
  - right backwards, left forwards - moves robot forwards
  - right forwards, left backwards - moves robot backwards
+
+to-do
+ - get servo to work - DONE
+ - make servo class with:
+   - moving forwards
+   - moving backwards
+   - stop
+   - right 90* turn
+   - left 90* turn
+   - 180* turn
+ - get colour/line sensor to work
+ - get lcd to work
+ - code in the class stuff for that (add what needs to be done later lmao)
+ - finish theory stuff (at home)
