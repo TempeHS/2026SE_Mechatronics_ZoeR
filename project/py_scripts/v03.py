@@ -19,27 +19,22 @@ from servo import Servo
 
 
 # create a PWM servo controller (16 - pin Pico)
-servo_pwm = PWM(Pin(16))
+servo_pwm = PWM(Pin(20))
+servo_pwm_II = PWM(Pin(18))
 
-# Set the parameters of the servo pulses, more details in the "Documentation" section
-freq = 50
-min_us = 500
-max_us = 2500
-dead_zone_us = 1500
-
-# create a servo object
-my_servo = Servo(
-    pwm=servo_pwm, min_us=min_us, max_us=max_us, dead_zone_us=dead_zone_us, freq=freq
-)
-
+# create a servo object using default servo parameters
+my_servo_left = Servo(pwm=servo_pwm)
+my_servo_right = Servo(pwm=servo_pwm_II)
 
 while True:
     # manually set the servo duty time
-    my_servo.set_duty(500)
+    my_servo_right.set_duty(500)
+    my_servo_left.set_duty(500)
     time.sleep(2)
+    print("backwards. runs right wheel.")
 
-    my_servo.set_duty(1500)
-    time.sleep(2)
-
-    my_servo.stop()
-    time.sleep(2)
+#TO-DO - DOUBLE PERIOD
+#FIX WIRES, RED - NEGATIVE, BLACK - POSITIVE
+#TAPE WIRES IN
+#TEST CODE
+#GET BOTH SERVOS TO WORK AT THE SAME TIME
