@@ -8,6 +8,7 @@ things to check if robot isnt working
 servo
  - right backwards, left forwards - moves robot forwards
  - right forwards, left backwards - moves robot backwards
+ - right servo - pin 18, left servo - pin 20
 
 to-do
  - get servo to work - DONE
