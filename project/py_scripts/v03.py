@@ -26,13 +26,24 @@ servo_pwm_II = PWM(Pin(18))
 
 my_servo_left = Servo(pwm=servo_pwm)
 my_servo_right = Servo(pwm=servo_pwm_II)
+timevar = int(0)
 
-while True:
-    # manually set the servo duty time
-    timevar = int(0)
-    my_servo_right.set_duty(1200)
-    time.sleep(0.5)
-    my_servo_right.set_duty(1500)
-    timevar = int(timevar) + 1
+while timevar < 1:
+    my_servo_left.set_duty(500)
+    time.sleep(1.4)
+    my_servo_left.set_duty(1500)
+    timevar = int(timevar + 1)
     print(timevar)
-    time.sleep(0.5)
+    time.sleep(1)
+if my_servo_left.set_duty(500):
+    my_servo_left.set_duty(1500)
+
+
+    #my_servo_left.set_duty(1500)
+    #timevar = int(timevar + 1)
+    #time.sleep(1.4)
+    #my_servo_left.set_duty(1800)
+    #print(timevar)
+    #time.sleep(0)
+#if my_servo_left.set_duty(1800):
+    #my_servo_left.set_duty(1500)

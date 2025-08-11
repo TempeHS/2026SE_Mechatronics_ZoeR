@@ -1,0 +1,14 @@
+import time
+timevar = int(0)
+test = False
+
+while timevar < 3:
+    test = True
+    timevar = int(timevar + 1)
+    time.sleep(1)
+    test = False
+    print(timevar)
+    print(test)
+    time.sleep(1)
+test = False
+print(test)

@@ -39,6 +39,17 @@ class servo_motor:
     def right(self):
         if self.__debug:
             print("servo turning right")
+        timevar = int(0)
+
+        while timevar < 1:
+            self.right_wheel.set_duty(1200)
+            timevar = int(timevar + 1)
+            time.sleep(0)
+            self.right_wheel.set_duty(1500)
+            print(timevar)
+            time.sleep(1.4)
+        if self.right_wheel.set_duty(1200):
+            self.right_wheel.set_duty(1500)
     
     def left(self):
         if self.__debug:
