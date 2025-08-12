@@ -39,21 +39,33 @@ class servo_motor:
     def right(self):
         if self.__debug:
             print("servo turning right")
-        timevar = int(0)
+        self.timevar = int(0)
 
-        while timevar < 1:
-            self.right_wheel.set_duty(1200)
-            timevar = int(timevar + 1)
-            time.sleep(0)
+        while self.timevar < 1:
+            self.right_wheel.set_duty(1900)
+            time.sleep(1.3)
             self.right_wheel.set_duty(1500)
+            timevar = int(self.timevar + 1)
             print(timevar)
-            time.sleep(1.4)
-        if self.right_wheel.set_duty(1200):
-            self.right_wheel.set_duty(1500)
+            time.sleep(0.5)
+        print("servo stopped.")
+        self.right_wheel.set_duty(1500)
     
     def left(self):
         if self.__debug:
             print("servo turning left")
+        self.timevar = int(0)
+
+        while self.timevar < 1:
+            self.left_wheel.set_duty(1100)
+            time.sleep(1.3)
+            self.left_wheel.set_duty(1500)
+            timevar = int(self.timevar + 1)
+            print(timevar)
+            time.sleep(0.5)
+        print("servo stopped.")
+        self.left_wheel.set_duty(1500)
+        self.timevar = 0
     
     def stop(self):
         if self.__debug:

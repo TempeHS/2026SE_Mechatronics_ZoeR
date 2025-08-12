@@ -14,36 +14,19 @@ of a set_duty(x) call are:
 """
 
 
-import time
+from time import sleep
 from machine import Pin, PWM
 from servo import Servo
-# from servo_classes import servo_motor
+from servo_classes import servo_motor
 
-# servo_tests = servo_motor(20, 18, True)
+servo_wheels = servo_motor(20, 18)
 
-servo_pwm = PWM(Pin(20))
-servo_pwm_II = PWM(Pin(18))
+def servotests():
+    print("testing servo motor class")
 
-my_servo_left = Servo(pwm=servo_pwm)
-my_servo_right = Servo(pwm=servo_pwm_II)
-timevar = int(0)
+    print("testing forward (slow) in 1")
+    sleep(1)
+    servo_wheels.slow_forward()
+    print("test over")
 
-while timevar < 1:
-    my_servo_left.set_duty(500)
-    time.sleep(1.4)
-    my_servo_left.set_duty(1500)
-    timevar = int(timevar + 1)
-    print(timevar)
-    time.sleep(1)
-if my_servo_left.set_duty(500):
-    my_servo_left.set_duty(1500)
-
-
-    #my_servo_left.set_duty(1500)
-    #timevar = int(timevar + 1)
-    #time.sleep(1.4)
-    #my_servo_left.set_duty(1800)
-    #print(timevar)
-    #time.sleep(0)
-#if my_servo_left.set_duty(1800):
-    #my_servo_left.set_duty(1500)
+servotests()
