@@ -75,7 +75,9 @@ class ultrasonic_sensor:
         sleep_ms(100)
 
     def get_range_front(self):
-        print(self.front_sensor.distance_mm)
+        distance_between_two = (self.front_sensor.distance_mm)
+        print(distance_between_two)
     
     def get_range_side(self):
-        print(self.side_sensor.distance_mm)
+        distance_between_two = (self.side_sensor.distance_mm)
+        print(distance_between_two)

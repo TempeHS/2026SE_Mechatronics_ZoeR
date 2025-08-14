@@ -10,16 +10,17 @@ servo
  - right forwards, left backwards - moves robot backwards
  - right servo - pin 18, left servo - pin 20
 
+ ultrasonic sensor
+  - front sensor - 0000 (i think?)
+  - side sensor - 0010 
+
 to-do
- - get servo to work - DONE
- - make servo class with:
-   - moving forwards
-   - moving backwards
-   - stop
-   - right 90* turn
-   - left 90* turn
-   - 180* turn
  - get colour/line sensor to work
  - get lcd to work
- - code in the class stuff for that (add what needs to be done later lmao)
- - finish theory stuff (at home)
+ - get lcd to display when over the colour green
+ - fix import errors
+ - make sure robot stops before running into walls
+    - if front ultrasonic distance is less than a certain amount (like 1-2cm)
+    - check if side ultrasonic distance is also less than a certain amount (however long the robot is when it turns + a couple of cm)
+       - if YES - turn in that direction
+       - if NO - turn in the other direction
