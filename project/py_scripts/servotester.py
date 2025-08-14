@@ -17,6 +17,7 @@ of a set_duty(x) call are:
 from time import sleep
 from machine import Pin, PWM
 from servo import Servo
+from subsystem_classes import servo_motor
 
 servo_wheels = servo_motor(20, 18)
 
