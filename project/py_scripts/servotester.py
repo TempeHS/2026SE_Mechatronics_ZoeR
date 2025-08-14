@@ -17,16 +17,15 @@ of a set_duty(x) call are:
 from time import sleep
 from machine import Pin, PWM
 from servo import Servo
-from servo_classes import servo_motor
 
 servo_wheels = servo_motor(20, 18)
 
 def servotests():
     print("testing servo motor class")
 
-    print("testing forward (slow) in 1")
+    print("testing left turn in 1")
     sleep(1)
-    servo_wheels.slow_forward()
+    servo_wheels.left()
     print("test over")
 
 servotests()

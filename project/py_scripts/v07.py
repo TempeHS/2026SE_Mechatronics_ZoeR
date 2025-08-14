@@ -8,7 +8,7 @@ from an object using a continuous servo motor controlled by a PID controller.
 from PiicoDev_Ultrasonic import PiicoDev_Ultrasonic
 from PiicoDev_Unified import sleep_ms
 from machine import Pin, PWM
-from servo import Servo
+from project.lib.servo import Servo
 from PID_Controller import PIDControl
 
 # System Configuration

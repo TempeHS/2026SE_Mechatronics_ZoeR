@@ -1,8 +1,10 @@
-#servo classes/library
+#main file for classes/libraries
 
 import time
 from machine import Pin, PWM
-from servo import Servo
+from project.lib.servo import Servo
+from PiicoDev_Ultrasonic import PiicoDev_Ultrasonic
+from PiicoDev_Unified import sleep_ms
 
 class servo_motor:
     def __init__(self, servo_left_pin, servo_right_pin, debug = False):
@@ -55,19 +57,33 @@ class servo_motor:
         if self.__debug:
             print("servo turning left")
         
-        timevar = int(0)
-        while timevar < 1:
-            self.left_wheel.set_duty(1100)
-            time.sleep(1.3)
-            self.left_wheel.set_duty(1500)
-            timevar = int(timevar + 1)
-            print(timevar)
-            time.sleep(0.5)
-        print("servo stopped.")
-        self.left_wheel.set_duty(1500)
+        self.left_wheel.set_angle(180)
+        time.sleep(1)  # Wait for 1 second
+        print("Servo at 0 degrees")
+        self.left_wheel.set_angle(90)
+        time.sleep(2)  # Wait for 1 second
+        print("Servo Stop")
     
     def stop(self):
         if self.__debug:
             print("servo stopping")
         self.left_wheel.set_duty(1500)
         self.right_wheel.set_duty(1500)
+
+class ultrasonic_sensor:
+    def __init__(self, range_a, range_b, debug = False):
+        self.range_a = range_a
+        self.range_b = range_b
+        self.front_sensor = PiicoDev_Ultrasonic(id=range_a)
+        self.side_sensor = PiicoDev_Ultrasonic(id=range_b)
+        self.debug = debug
+
+    def get_range(self):
+        print(self.front_sensor.distance_mm, self.side_sensor.distance_mm)
+        sleep_ms(100)
+
+    def get_range_front(self):
+        print(self.front_sensor.distance_mm)
+    
+    def get_range_side(self):
+        print(self.side_sensor.distance_mm)

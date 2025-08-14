@@ -12,10 +12,10 @@ of a set_angle(x) call are:
 """
 
 import time
-from servo import Servo
+from project.lib.servo import Servo
 from machine import Pin, PWM
 
-servo_pwm = PWM(Pin(16))
+servo_pwm = PWM(Pin(18))
 
 # Set the parameters of the servo pulses, more details in the "Documentation" section
 freq = 50
@@ -31,19 +31,9 @@ my_servo = Servo(
 
 while True:
     # Set the Servo to the mid-point (90 is half way between zero and 180 degrees)
-    my_servo.set_angle(0)
-    time.sleep(5)  # Wait for 1 second
-    print("Servo at 0 degrees")
-
-    # Set the Servo to the left most position
-    my_servo.set_angle(90)
-    time.sleep(2)  # Wait for 1 second
-    print("Servo Stop")
-
-    # Set the Servo to the right most position
     my_servo.set_angle(180)
-    time.sleep(5)  # Wait for 1 second
-    print("Servo at 180 degrees")
+    time.sleep(1)  # Wait for 1 second
+    print("Servo at 0 degrees")
 
     # Set the Servo to the left most position
     my_servo.set_angle(90)

@@ -3,7 +3,7 @@ Sample code for a simple state machine
 """
 
 from machine import Pin, PWM
-from servo import Servo
+from project.lib.servo import Servo
 from machine import RTC
 
 
