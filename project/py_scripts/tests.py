@@ -1,4 +1,4 @@
 #testing stuff
-from subsystem_classes import ultrasonic_sensor
+import subsystem_classes
 
 us_sensor = ultrasonic_sensor([0, 0, 0, 0], [0, 0, 1, 0])

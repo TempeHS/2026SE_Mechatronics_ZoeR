@@ -12,24 +12,19 @@ of a set_duty(x) call are:
 |   2500   | Fast    | Forward   |
 
 """
+from time import sleep
+from subsystem_classes import servo_motor
 
-try:
-    from machine import Pin, PWM
-    from servo import Servo
-    from subsystem_classes import servo_motor
-    from time import sleep
+servo_wheels = servo_motor(20, 18)
 
-    servo_wheels = servo_motor(20, 18)
 
-    def servotests():
-        print("testing servo motor class")
 
-        print("testing left turn in 1")
-        sleep(1)
-        servo_wheels.left()
-        print("test over")
+def servotests():
+    print("testing servo motor class")
 
-    servotests()
+    print("testing left turn in 1")
+    sleep(1)
+    servo_wheels.left()
+    print("test over")
 
-except ImportError:
-    print("i hate it here")
+servotests()
