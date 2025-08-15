@@ -2,7 +2,7 @@
 
 import time
 from machine import Pin, PWM
-from servo import Servo
+from project.lib.servo import Servo
 from PiicoDev_Ultrasonic import PiicoDev_Ultrasonic
 from PiicoDev_Unified import sleep_ms
 
