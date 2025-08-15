@@ -13,20 +13,23 @@ of a set_duty(x) call are:
 
 """
 
+try:
+    from machine import Pin, PWM
+    from servo import Servo
+    from subsystem_classes import servo_motor
+    from time import sleep
 
-from time import sleep
-from machine import Pin, PWM
-from servo import Servo
-from subsystem_classes import servo_motor
+    servo_wheels = servo_motor(20, 18)
 
-servo_wheels = servo_motor(20, 18)
+    def servotests():
+        print("testing servo motor class")
 
-def servotests():
-    print("testing servo motor class")
+        print("testing left turn in 1")
+        sleep(1)
+        servo_wheels.left()
+        print("test over")
 
-    print("testing left turn in 1")
-    sleep(1)
-    servo_wheels.left()
-    print("test over")
+    servotests()
 
-servotests()
+except ImportError:
+    print("i hate it here")

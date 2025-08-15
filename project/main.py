@@ -7,7 +7,7 @@ from machine import Pin
 file_name = "servotester"
 
 # Add the path to the sys.path
-sys.path.append("/project_files")
+sys.path.append("/py_scripts")
 
 # Create a stop pin to stop the main loop
 stop_pin = Pin(4, Pin.IN, Pin.PULL_UP)
