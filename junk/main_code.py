@@ -5,7 +5,7 @@ from machine import Pin, PWM
 #, RTC
 from time import sleep
 from project.lib.servo import Servo
-from subsystem_classes import servo_motor, ultrasonic_sensor
+from junk.old_subsystem_classes import servo_motor, ultrasonic_sensor
 
 #assigning pins and other shenanigans
 servo_wheels = servo_motor(20, 18)

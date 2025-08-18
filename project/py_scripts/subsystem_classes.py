@@ -1,5 +1,5 @@
-from machine import Pin, PWM
 import time
+from machine import Pin, PWM
 from servo import Servo
 
 class servo_motor:
