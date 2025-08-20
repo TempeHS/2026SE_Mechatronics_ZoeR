@@ -8,9 +8,9 @@ range_a = PiicoDev_Ultrasonic(id=[0, 0, 0, 0])
 range_b = PiicoDev_Ultrasonic(id=[0, 0, 1, 0])
 
 while True:
-    if range_a.distance_mm > 100:
-        servo_wheels.slow_forward()
-        print(range_a.distance_mm)
-    else:
+    if range_a.distance_mm < 100:
         print("WE'RE GONNA CRASHHHHHHHH")
         servo_wheels.stop()
+    else:
+        servo_wheels.slow_forward()
+        print(range_a.distance_mm)
