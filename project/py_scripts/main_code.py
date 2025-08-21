@@ -2,11 +2,11 @@
 from servo_classes import servo_motor
 from ultrasonic_classes import ultrasonic_sensor
 from colour_display_classes import colour_lcd
+from PiicoDev_VEML6040 import PiicoDev_VEML6040
+from PiicoDev_SSD1306 import *
+#additional imports are for bugfixing purposes - the program kept throwing a NameError for the LCD (and sometimes colour sensor)
+#seems to be an inheritance/import issue, since adding these in here and in main.py fixes this (yippee!!)
 
-#DEV NOTE - FOR SOME REASON YOU HAVE TO RUN THE COLOUR_SCREEN_CLASSES FILE BEFORE THIS ONE WHEN YOU PLUG IT IN
-#OTHERWISE THE LCD DOESNT WORK
-#I DO NOT KNOW WHY
-#I AM LOOKING INTO IT
 LCD_screen = create_PiicoDev_SSD1306()
 colour_sensor = PiicoDev_VEML6040()
 
@@ -25,7 +25,7 @@ def main():
             if wall_distance.get_front() > 100:
                 servo_wheels.slow_forward()
             else:
-                print("WE'RE GONNA CRASHHHHHHHH")
+                print("Wall detected.")
                 servo_wheels.stop()
                 servo_wheels.right()
 

@@ -1,7 +1,13 @@
 #  STUDENTS SHOULD ONLY EDIT THE FILE NAME IN LINE 7
 import sys
 from machine import Pin
+from PiicoDev_VEML6040 import PiicoDev_VEML6040
+from PiicoDev_SSD1306 import *
 
+LCD_screen = create_PiicoDev_SSD1306()
+#additional imports are for bugfixing - see main_code.py
+#also for some reason when unplugging the robot this code doesnt run right away (it just runs into a wall lmao)
+#turning the batteries off and then on again seems to fix this
 
 # File name of the script to import
 file_name = "main_code"
