@@ -1,6 +1,4 @@
-"""
-Read distance from two PiicoDev Ultrasonic Rangefinders independently
-"""
+#sample/unit test code for ultrasonic sensors
 
 from PiicoDev_Ultrasonic import PiicoDev_Ultrasonic
 from PiicoDev_Unified import sleep_ms

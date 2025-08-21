@@ -1,6 +1,5 @@
- """
-Basic blink program
-"""
+#basic blink program
+#also used as a unit test to make sure the robot is connected properly
 
 from machine import Pin
 from utime import sleep

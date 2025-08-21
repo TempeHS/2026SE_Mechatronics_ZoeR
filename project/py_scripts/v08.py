@@ -1,7 +1,7 @@
 #unit tests for servo motor class
 
 from time import sleep
-from subsystem_classes import servo_motor
+from servo_classes import servo_motor
 
 servo_wheels = servo_motor(20, 18)
 

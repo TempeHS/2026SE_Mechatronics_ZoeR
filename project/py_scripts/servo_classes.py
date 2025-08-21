@@ -1,8 +1,7 @@
+#classes for the servos/wheels
 import time
 from machine import Pin, PWM
 from servo import Servo
-from PiicoDev_Ultrasonic import PiicoDev_Ultrasonic
-from PiicoDev_Unified import sleep_ms
 
 class servo_motor:
     def __init__(self, servo_left_pin, servo_right_pin, debug = False):
@@ -59,12 +58,3 @@ class servo_motor:
             print("servo stopping")
         self.left_wheel.set_duty(1500)
         self.right_wheel.set_duty(1500)
-
-class ultrasonic_sensor:
-    def __init__(self, range_a, debug = False):
-        self.range_a = range_a
-        self.front_sensor = PiicoDev_Ultrasonic(id=range_a)
-        self.debug = debug
-
-    def get_front(self):
-        return(self.front_sensor.distance_mm)

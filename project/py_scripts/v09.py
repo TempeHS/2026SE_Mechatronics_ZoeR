@@ -1,4 +1,7 @@
-from subsystem_classes import servo_motor, ultrasonic_sensor
+#unit tests for the ultrasonic sensor class and wall avoidance code
+
+from servo_classes import servo_motor
+from ultrasonic_classes import ultrasonic_sensor
 from PiicoDev_Ultrasonic import PiicoDev_Ultrasonic
 from PiicoDev_Unified import sleep_ms
 

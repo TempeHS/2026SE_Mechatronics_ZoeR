@@ -4,7 +4,7 @@ from machine import Pin
 
 
 # File name of the script to import
-file_name = "v09"
+file_name = "main_code"
 
 # Add the path to the sys.path
 sys.path.append("/py_scripts")
