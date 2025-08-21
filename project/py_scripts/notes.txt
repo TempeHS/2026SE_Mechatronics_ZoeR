@@ -24,3 +24,20 @@ to-do
     - check if side ultrasonic distance is also less than a certain amount (however long the robot is when it turns + a couple of cm)
        - if YES - turn in that direction
        - if NO - turn in the other direction
+
+
+theory stuff checklist
+ - SRS document - do at home
+ - flowchart - DONE 
+ - lv0 DFD - DONE
+ - lv1 DFD - do at home
+ - UML class diagram - do at home
+ - wiring diagram - DONE (probably...)
+ - power supply diagram - 
+ - power supply calculations - 
+ - online simulations..?
+ - photos of the robot - DONE
+ - github repository - well you tell me 
+ - online simulations for unit tests
+ - ACTUAL unit tests - DONE (mostly)
+ - justification - i'm going to disappear into the woods under mysterious circumstances and no-one will hear from me for a week. not done. do at home.
